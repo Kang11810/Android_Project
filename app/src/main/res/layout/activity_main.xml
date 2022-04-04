@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--메인 레이아웃(하위 레이아웃을 수직으로 생성)-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+<!--버튼 및 년,월을 표기할 레이아웃(하위 레이아웃을 수평으로 생성)-->
+        <Button
+            android:id="@+id/monthPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이전"/>
+<!--이전버튼-->
+        <Button
+            android:id="@+id/monthNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:text="다음" />
+<!--다음버튼-->
+        <TextView
+            android:id="@+id/monthText"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="MonthView"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+        <!--년, 월을 표기할 텍스트 뷰-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+<!--요일을 표기할 레이아웃(하위 레이아웃을 수평으로 생성)-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="일"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:background="#ff0000"/>
+<!--일요일을 표기할 텍스트 뷰-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="월"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:background="#ffffff"/>
+<!--월요일을 표기할 텍스트 뷰-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="화"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:background="#ffffff"/>
+<!--화요일을 표기할 텍스트 뷰-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:background="#ffffff"/>
+<!--수요일을 표기할 텍스트 뷰-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="목"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:background="#ffffff"/>
+<!--목요일을 표기할 텍스트 뷰-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="금"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:background="#ffffff"/>
+<!--금요일을 표기할 텍스트 뷰-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="토"
+            android:textSize="30dp"
+            android:gravity="center_horizontal"
+            android:background="#00aaff"/>
+<!--토요일을 표기할 텍스트 뷰-->
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/monthView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="7"
+        android:horizontalSpacing="1dp"
+        android:verticalSpacing="1dp"
+        android:stretchMode="columnWidth"
+        android:background="#ffbbbbbb">
+<!--날자를 표기할 그리드 뷰 (가로 7칸으로 생성)-->
+    </GridView>
+</LinearLayout>
